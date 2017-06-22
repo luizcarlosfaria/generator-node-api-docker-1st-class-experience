@@ -1,0 +1,56 @@
+{
+  "name": "generator-node-api-docker-1st-class-experience",
+  "version": "0.0.0",
+  "description": "NodeJS + Typescript + TSLint + Restify + Docker, With VS Code Automation = TypeScript Live Debug with Containers",
+  "homepage": "https://github.com/luizcarlosfaria/generator-node-api-docker-1st-class-experience",
+  "author": {
+    "name": "Luiz Carlos Faria",
+    "email": "luizcarlosfaria@gmail.com",
+    "url": "http://luizcarlosfaria.net/"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "docker",
+    "nodejs",
+    "node",
+    "restify",
+    "vscode-debugging",
+    "node-vscode-container-debugging",
+    "yeoman-generator"
+  ],
+  "devDependencies": {
+    "yeoman-test": "^1.6.0",
+    "yeoman-assert": "^3.0.0",
+    "coveralls": "^2.12.0",
+    "nsp": "^2.6.3",
+    "eslint": "^3.18.0",
+    "eslint-config-xo-space": "^0.16.0",
+    "jest": "^19.0.2",
+    "jest-cli": "^20.0.0"
+  },
+  "dependencies": {
+    "yeoman-generator": "^1.0.0",
+    "chalk": "^1.1.3",
+    "yosay": "^2.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "prepublish": "nsp check",
+    "pretest": "eslint . --fix",
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "jest": true,
+      "node": true
+    }
+  },
+  "repository": "luizcarlosfaria/generator-node-api-docker-1st-class-experience",
+  "license": "MIT"
+}

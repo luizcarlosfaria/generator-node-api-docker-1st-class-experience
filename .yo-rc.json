@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Luiz Carlos Faria",
+      "authorEmail": "luizcarlosfaria@gmail.com",
+      "authorUrl": "http://luizcarlosfaria.net/"
+    }
+  }
+}
