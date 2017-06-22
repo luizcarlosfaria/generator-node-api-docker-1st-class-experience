@@ -9,4 +9,3 @@ services:
     volumes: 
     - ./src:/app/src
     - ./dist:/app/dist
-    - ./html:/app/html
