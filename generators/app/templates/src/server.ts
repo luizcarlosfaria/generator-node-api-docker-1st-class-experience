@@ -20,4 +20,4 @@ setInterval(() => {
 
 	console.log(`Debugging a TypeScript NodeJS@${process.version} API on ${os.hostname()} (${process.platform}/${process.arch})`);
 
-});
+}, 3000);
