@@ -6,12 +6,25 @@ var helpers = require('yeoman-test');
 describe('generator-node-api-docker-1st-class-experience:app', () => {
   beforeAll(() => {
     return helpers.run(path.join(__dirname, '../generators/app'))
-      .withPrompts({someAnswer: true});
+      .withPrompts({
+        projectName: 'teste_api',
+        projectDescription: 'projectDescription',
+        mongodbUsername: 'mongodbUsername',
+        mongodbPassword: 'mongodbPassword'
+      });
   });
 
   it('creates files', () => {
     assert.file([
-      'dummyfile.txt'
+      'docker-compose.debug.yml',
+      'docker-compose.yml',
+      'Dockerfile.all.teste_api-api-base',
+      'Dockerfile.debug.teste_api-api',
+      'Dockerfile.release.teste_api-api',
+      'package.json',
+      'tsconfig.json',
+      'tslint.json',
+      'typings.json'
     ]);
   });
 });

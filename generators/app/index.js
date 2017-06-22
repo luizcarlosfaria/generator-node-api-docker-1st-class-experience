@@ -12,8 +12,6 @@ module.exports = class extends Generator {
       'Welcome to ' + chalk.red('Node API 1st class experience with Docker and VS Code') + ' generator!'
     ));
 
-
-
     const prompts = [{
       type: 'input',
       name: 'projectName',
@@ -27,7 +25,7 @@ module.exports = class extends Generator {
       type: 'input',
       name: 'mongodbUsername',
       message: 'MongoDB root username',
-      default: "app_mongo_user"
+      default: 'app_mongo_user'
     }, {
       type: 'input',
       name: 'mongodbPassword',
@@ -58,12 +56,12 @@ module.exports = class extends Generator {
   }
 
   passwordGen() {
-    const newPassword = replace(replace(replace(replace(uuid(), "-", ""), "-", ""), "-", ""), "-", "");
+    const newPassword = replace(replace(replace(replace(uuid(), '-', ''), '-', ''), '-', ''), '-', '');
     return newPassword;
   }
 
   install() {
-    this.spawnCommandSync("npm", ["run", "restore-all"]);
-    //this.installDependencies({bower: false});
+    this.spawnCommandSync('npm', ['run', 'restore-all']);
+    // This.installDependencies({bower: false});
   }
 };
