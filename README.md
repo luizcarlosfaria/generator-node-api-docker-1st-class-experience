@@ -21,18 +21,6 @@ npm install -g yo generator-node-api-docker-1st-class-experience
 
 5. Just press F5 key (The first launch task uses docker to debug, you have other two options to debug in launch dropdown)
 
-### Notes
-* Local build will run in 2 seconds
-* First docker build is a full build and will during 3 minutes or more (depending on your connection speed).
-* Every next build will run in seconds (
-* Only changes in below files will demand a full build
-  * `package-lock.json`
-  * `package.json`
-  * `tsconfig.json`
-  * `tslint.json`
-  * `typings.json`
-
-
 ## The 1st class experience with NodeJS, Typescript, Docker
 
  * A NodeJS API with TypeScript, TSLint, Restify, MongoDB.
@@ -51,6 +39,16 @@ npm install -g yo generator-node-api-docker-1st-class-experience
     * TSLint with autofix enabled on VSCode and Build.
     * Use status-bar-tasks [Status Bar Tasks VSCode plugin][status-bar-tasks-url]  to see all tasks on status bar or use `Tasks: Run Task` with pressing `Ctrl+p >`
  
+## Notes
+* Local build will run in 2 seconds.
+* First docker build is a full build and will during 3 minutes or more (depending on your connection speed).
+* Every next build will run in seconds (
+* Only changes in below files will demand a full build:
+  * `package-lock.json`
+  * `package.json`
+  * `tsconfig.json`
+  * `tslint.json`
+  * `typings.json`
 
 ## License
 
