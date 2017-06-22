@@ -2,7 +2,6 @@
 const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
-const path = require('path');
 const uuid = require('uuid/v4');
 var replace = require('lodash.replace');
 
