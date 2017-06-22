@@ -3,7 +3,7 @@ services:
   <%- projectName %>-api:    
     build:
       dockerfile: ./Dockerfile.debug.<%- projectName %>-api
-    image: <%- projectName %>-api-base-livedebug
+    image: <%- projectName %>-api-livedebug
     ports:
     - "9229:9229"
     volumes: 
