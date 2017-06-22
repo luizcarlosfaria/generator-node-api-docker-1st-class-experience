@@ -1,6 +1,6 @@
 {
   "name": "<%- projectName %>",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "<%- projectDescription %>",
   "main": "./",
   "license": "ISC",
