@@ -9,11 +9,17 @@ First, install [Yeoman](http://yeoman.io) and generator-node-api-docker-1st-clas
 npm install -g yo generator-node-api-docker-1st-class-experience
 ```
 
-Then generate your new project:
+## Then generate your new project:
 
-```bash
-yo node-api-docker-1st-class-experience
-```
+1. Create a new folder.
+
+2. Run ```yo node-api-docker-1st-class-experience```
+
+3. Open VSCode `code .`
+
+4. Put a breakpoint at line 21 of ./src/server.ts 
+
+5. Just press F5 key (The first launch task uses docker to debug, you have other two options to debug in launch dropdown)
 
 ## The 1st class experience with NodeJS, Typescript, Docker
 
@@ -31,9 +37,8 @@ yo node-api-docker-1st-class-experience
     * 3 debug options.
     * 5 VSCode tasks (including build task) to perform all necessary operations to manage, debug and build with docker.
     * TSLint with autofix enabled on VSCode and Build.
+    * Use status-bar-tasks [Status Bar Tasks VSCode plugin][status-bar-tasks-url]  to see all tasks on status bar.
  
-
-
 
 ## License
 
@@ -48,3 +53,4 @@ MIT © [Luiz Carlos Faria](http://luizcarlosfaria.net/)
 [daviddm-url]: https://david-dm.org/luizcarlosfaria/generator-node-api-docker-1st-class-experience
 [coveralls-image]: https://coveralls.io/repos/luizcarlosfaria/generator-node-api-docker-1st-class-experience/badge.svg
 [coveralls-url]: https://coveralls.io/r/luizcarlosfaria/generator-node-api-docker-1st-class-experience
+[status-bar-tasks-url]:https://marketplace.visualstudio.com/items?itemName=GuardRex.status-bar-tasks

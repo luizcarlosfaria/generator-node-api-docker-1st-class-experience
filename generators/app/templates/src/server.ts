@@ -1,4 +1,5 @@
-﻿import { HealthCheckApiController } from "./app/apicontrollers/HealthCheckApiController";
+﻿import * as os from "os";
+import { HealthCheckApiController } from "./app/apicontrollers/HealthCheckApiController";
 import { ApiServer } from "./infrastructure/ApiServer";
 import { IInitializable } from "./infrastructure/IInitializable";
 
@@ -14,3 +15,9 @@ const initAll = async (server: IInitializable) => {
 };
 
 servers.forEach(initAll);
+
+setInterval(() => {
+
+	console.log(`Debugging a TypeScript NodeJS@${process.version} API on ${os.hostname()} (${process.platform}/${process.arch})`);
+
+});
