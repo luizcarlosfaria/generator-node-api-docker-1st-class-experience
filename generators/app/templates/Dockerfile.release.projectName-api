@@ -1,0 +1,10 @@
+FROM <%- projectName %>-api-base
+
+ADD ./src /app/src
+ADD ./html /app/html
+
+RUN npm run build
+
+ENTRYPOINT nodemon ./dist/server.js 
+
+

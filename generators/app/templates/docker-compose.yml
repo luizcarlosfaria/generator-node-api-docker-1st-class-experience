@@ -1,0 +1,47 @@
+version: '3'
+services:
+  <%- projectName %>-api-base:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile.all.<%- projectName %>-api-base
+    image: <%- projectName %>-api-base
+  <%- projectName %>-api:    
+    build:
+      context: ./
+      dockerfile: ./Dockerfile.release.<%- projectName %>-api
+    image: <%- projectName %>-api
+    depends_on:
+      - <%- projectName %>-api-base
+      - mongo
+    links:
+      - mongo:mongo
+    networks: 
+    - <%- projectName %>-net
+    ports:    
+    - "3000:3000"
+    environment:
+      mongodb_app: mongodb://<%- mongodbUsername %>:<%- mongodbPassword %>@mongo:27017/admin
+      api_port: 3000      
+  mongo:
+    image: mongo
+    volumes:
+    - db_data:/data/db
+    restart: always
+    command: --storageEngine wiredTiger
+    ports:
+    - "27017:27017"
+    depends_on:
+      - <%- projectName %>-api-base    
+    networks:
+    - <%- projectName %>-net
+    environment: 
+      MONGO_INITDB_ROOT_USERNAME: <%- mongodbUsername %>
+      MONGO_INITDB_ROOT_PASSWORD: <%- mongodbPassword %>
+
+
+volumes:
+  db_data:
+
+networks: 
+  <%- projectName %>-net: 
+    driver: bridge

@@ -1,0 +1,12 @@
+version: '3'
+services:
+  <%- projectName %>-api:    
+    build:
+      dockerfile: ./Dockerfile.debug.<%- projectName %>-api
+    image: <%- projectName %>-api-base-livedebug
+    ports:
+    - "9229:9229"
+    volumes: 
+    - ./src:/app/src
+    - ./dist:/app/dist
+    - ./html:/app/html

@@ -1,0 +1,41 @@
+{
+    // Use IntelliSense to learn about possible Node.js debug attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "Docker debug",
+            "address": "127.0.0.1",
+            "port": 9229,
+            "protocol": "inspector",
+            "localRoot": "${workspaceRoot}",
+            "remoteRoot": "/app",
+            "preLaunchTask":"[docker] build-and-start"
+        },
+         {
+            "type": "node",
+            "request": "attach",
+            "name": "Docker attach",
+            "address": "127.0.0.1",
+            "port": 9229,
+            "protocol": "inspector",
+            "localRoot": "${workspaceRoot}",
+            "remoteRoot": "/app"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Local debug",
+            "program": "${workspaceRoot}/dist/server.js",
+            "cwd": "${workspaceRoot}",
+            "protocol": "inspector",
+            "env": {
+                                
+            },
+            "preLaunchTask":"[local] build"
+        }
+    ]
+}

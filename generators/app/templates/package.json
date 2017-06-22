@@ -1,0 +1,36 @@
+{
+  "name": "<%- projectName %>",
+  "version": "0.1.0",
+  "description": "<%- projectDescription %>",
+  "main": "./",
+  "license": "ISC",
+  "author": {
+    "name": "your name",
+    "email": "your email address",
+    "url": "your website/blog"
+  },
+  "engines": {
+    "node": ">=8.1.2"
+  },
+  "scripts": {
+    "restore-global": "npm install -g typescript tslint typings nodemon",
+    "restore-local": "npm install  && typings i",
+    "restore-all": "npm run restore-global && npm run restore-local",
+    "build": "npm run build-ts && npm run tslint",
+    "build-ts": "tsc",
+    "build-watch": "tsc -w",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "docker-run": "npm run build && docker-compose -f docker-compose.yml -f docker-compose.debug.yml build && docker-compose -f docker-compose.yml -f docker-compose.debug.yml up -d",
+    "docker-watch": "npm run docker-run && npm run build-watch",
+    "docker-stop": "docker-compose -f docker-compose.yml -f docker-compose.debug.yml down",
+    "docker-cleanup": "npm run docker-stop && docker rmi <%- projectName %>-api <%- projectName %>-api-base-livedebug"
+  },
+  "dependencies": {
+    "mongodb": "^2.2.28",
+    "restify": "^4.3.0"
+  },
+  "devDependencies": {
+    "@types/mongodb": "^2.2.2",
+    "@types/restify": "^4.3.2"
+  }
+}
