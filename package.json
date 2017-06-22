@@ -1,7 +1,7 @@
 {
   "name": "generator-node-api-docker-1st-class-experience",
   "version": "0.0.0",
-  "description": "NodeJS + Typescript + TSLint + Restify + Docker, With VS Code Automation = TypeScript Live Debug with Containers",
+  "description": "NodeJS + Typescript + TSLint + Restify + MongoDB + Docker, With VS Code Automation = TypeScript Live Debug with Containers",
   "homepage": "https://github.com/luizcarlosfaria/generator-node-api-docker-1st-class-experience",
   "author": {
     "name": "Luiz Carlos Faria",
@@ -16,6 +16,8 @@
     "docker",
     "nodejs",
     "node",
+    "mongo",
+    "mongodb",
     "restify",
     "vscode-debugging",
     "node-vscode-container-debugging",
