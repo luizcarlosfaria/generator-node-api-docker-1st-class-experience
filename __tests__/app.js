@@ -24,7 +24,11 @@ describe('generator-node-api-docker-1st-class-experience:app', () => {
       'package.json',
       'tsconfig.json',
       'tslint.json',
-      'typings.json'
+      'typings.json',
+      '.gitignore'
     ]);
+    assert.fileContent('docker-compose.yml', 'mongodb_app: mongodb://mongodbUsername:mongodbPassword@mongo:27017/admin');
+    assert.fileContent('docker-compose.yml', 'MONGO_INITDB_ROOT_USERNAME: mongodbUsername');
+    assert.fileContent('docker-compose.yml', 'MONGO_INITDB_ROOT_PASSWORD: mongodbPassword');
   });
 });

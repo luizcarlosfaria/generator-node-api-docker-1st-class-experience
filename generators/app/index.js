@@ -16,7 +16,7 @@ module.exports = class extends Generator {
       type: 'input',
       name: 'projectName',
       message: 'Your project name',
-      default: this.appname // Default to current folder name
+      default: this.escapeName(this.appname) // Default to current folder name
     }, {
       type: 'input',
       name: 'projectDescription',
@@ -35,6 +35,7 @@ module.exports = class extends Generator {
 
     return this.prompt(prompts).then(props => {
       // To access props later use this.props.someAnswer;
+      props.projectName = this.escapeName(props.projectName);
       this.props = props;
     });
   }
@@ -50,6 +51,11 @@ module.exports = class extends Generator {
       this.destinationPath('.vscode/'),
       this.props
     );
+    this.fs.copyTpl(
+      this.templatePath('.gitignore'),
+      this.destinationPath('.gitignore'),
+      this.props
+    );
     this.fs.move(this.destinationPath('Dockerfile.all.projectName-api-base'), this.destinationPath(`Dockerfile.all.${this.props.projectName}-api-base`));
     this.fs.move(this.destinationPath('Dockerfile.debug.projectName-api'), this.destinationPath(`Dockerfile.debug.${this.props.projectName}-api`));
     this.fs.move(this.destinationPath('Dockerfile.release.projectName-api'), this.destinationPath(`Dockerfile.release.${this.props.projectName}-api`));
@@ -60,8 +66,23 @@ module.exports = class extends Generator {
     return newPassword;
   }
 
+  escapeName(textToEscape) {
+    if (textToEscape === undefined) {
+      return textToEscape;
+    }
+    var escapedName = textToEscape.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+    return escapedName;
+  }
+
   install() {
-    this.spawnCommandSync('npm', ['run', 'restore-all']);
+    this.spawnCommandSync('npm', ['run', 'restore-global']);
+    this.spawnCommandSync('npm', ['install', 'mongodb', 'restify', '--save']);
+    this.spawnCommandSync('npm', ['install', '@types/mongodb', '@types/restify', '--save-dev']);
+    this.spawnCommandSync('typings', ['install', 'body-parser', 'mongodb', '--save']);
+
+    this.spawnCommandSync('git', ['init']);
+    this.spawnCommandSync('git', ['add', '.']);
+    this.spawnCommandSync('git', ['commit', '-m', 'node-api-docker-1st-class-experience baseline']);
     // This.installDependencies({bower: false});
   }
 };

@@ -27,11 +27,7 @@
     "docker-cleanup": "npm run docker-stop-cleanup && docker rmi <%- projectName %>-api <%- projectName %>-api-livedebug || echo Cleanup finished!"
   },
   "dependencies": {
-    "mongodb": "^2.2.28",
-    "restify": "^4.3.0"
   },
   "devDependencies": {
-    "@types/mongodb": "^2.2.2",
-    "@types/restify": "^4.3.2"
   }
 }

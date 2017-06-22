@@ -1,5 +1,5 @@
 # generator-node-api-docker-1st-class-experience [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> NodeJS + Typescript + TSLint + Restify + MongoDB + Docker, With VS Code Automation = TypeScript Live Debug with Containers
+> NodeJS + Typescript + TSLint + Restify + MongoDB + Docker, With VS Code Automation = VSCode TypeScript Live Debug with Containers
 
 ## Installation
 

@@ -1,7 +1,5 @@
 {
   "name": "<%- projectName %>",
   "dependencies": {
-    "body-parser": "registry:npm/body-parser#1.15.2+20161116154925",
-    "mongodb": "registry:npm/mongodb#2.1.0+20170211100415"
   }
 }
