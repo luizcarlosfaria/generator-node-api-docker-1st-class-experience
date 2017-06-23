@@ -52,9 +52,10 @@ npm install -g yo generator-node-api-docker-1st-class-experience
 
 ## License
 
-MIT © [Luiz Carlos Faria](http://luizcarlosfaria.net/)
+MIT © [Luiz Carlos Faria](http://luizcarlosfaria.net/) ![made in brazil][brazil]
 
 
+[brazil]:http://www.goal.cc/content/images/flags/28.png
 [npm-image]: https://badge.fury.io/js/generator-node-api-docker-1st-class-experience.svg
 [npm-url]: https://npmjs.org/package/generator-node-api-docker-1st-class-experience
 [travis-image]: https://travis-ci.org/luizcarlosfaria/generator-node-api-docker-1st-class-experience.svg?branch=master
