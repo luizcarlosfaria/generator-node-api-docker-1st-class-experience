@@ -51,11 +51,9 @@ module.exports = class extends Generator {
       this.destinationPath('.vscode/'),
       this.props
     );
-    this.fs.copyTpl(
-      this.templatePath('_gitignore'),
-      this.destinationPath('.gitignore'),
-      this.props
-    );
+    this.fs.move(this.destinationPath('_gitignore'), this.destinationPath('.gitignore'));
+    this.fs.move(this.destinationPath('_package.json'), this.destinationPath('package.json'));
+
     this.fs.move(this.destinationPath('Dockerfile.all.projectName-api-base'), this.destinationPath(`Dockerfile.all.${this.props.projectName}-api-base`));
     this.fs.move(this.destinationPath('Dockerfile.debug.projectName-api'), this.destinationPath(`Dockerfile.debug.${this.props.projectName}-api`));
     this.fs.move(this.destinationPath('Dockerfile.release.projectName-api'), this.destinationPath(`Dockerfile.release.${this.props.projectName}-api`));
