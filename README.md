@@ -1,4 +1,4 @@
-# generator-node-api-docker-1st-class-experience [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# generator-node-api-docker-1st-class-experience [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage percentage][coveralls-image]][coveralls-url] [![Downloads][npm-downloads-week]][npm-url] [![Downloads][npm-downloads-month]][npm-url] [![Downloads][npm-downloads-year]][npm-url] [![Downloads][npm-downloads-all]][npm-url]
 > NodeJS + Typescript + TSLint + Restify + MongoDB + Docker, With VS Code Automation = VSCode TypeScript Live Debug with Containers
 
 ## Installation
@@ -52,7 +52,7 @@ npm install -g yo generator-node-api-docker-1st-class-experience
 
 ## License
 
-MIT © [Luiz Carlos Faria](http://luizcarlosfaria.net/) ![made in brazil][brazil]
+![MIT][npm-license] © [Luiz Carlos Faria](http://luizcarlosfaria.net/) ![made in brazil][brazil]
 
 
 [brazil]:http://www.goal.cc/content/images/flags/28.png
@@ -65,3 +65,12 @@ MIT © [Luiz Carlos Faria](http://luizcarlosfaria.net/) ![made in brazil][brazil
 [coveralls-image]: https://coveralls.io/repos/luizcarlosfaria/generator-node-api-docker-1st-class-experience/badge.svg
 [coveralls-url]: https://coveralls.io/r/luizcarlosfaria/generator-node-api-docker-1st-class-experience
 [status-bar-tasks-url]:https://marketplace.visualstudio.com/items?itemName=GuardRex.status-bar-tasks
+[dependencies]:https://img.shields.io/david/luizcarlosfaria/generator-node-api-docker-1st-class-experience.svg
+
+
+
+[npm-downloads-all]:https://img.shields.io/npm/dt/generator-node-api-docker-1st-class-experience.svg
+[npm-downloads-week]:https://img.shields.io/npm/dw/generator-node-api-docker-1st-class-experience.svg
+[npm-downloads-month]:https://img.shields.io/npm/dm/generator-node-api-docker-1st-class-experience.svg
+[npm-downloads-year]:https://img.shields.io/npm/dy/generator-node-api-docker-1st-class-experience.svg
+[npm-license]:https://img.shields.io/npm/l/generator-node-api-docker-1st-class-experience.svg
