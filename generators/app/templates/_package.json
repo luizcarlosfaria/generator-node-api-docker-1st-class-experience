@@ -9,9 +9,6 @@
     "email": "your email address",
     "url": "your website/blog"
   },
-  "engines": {
-    "node": ">=8.1.2"
-  },
   "scripts": {
     "restore-global": "npm install -g typescript tslint typings nodemon",
     "restore-local": "npm install  && typings i",
