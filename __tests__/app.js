@@ -10,7 +10,9 @@ describe('generator-node-api-docker-1st-class-experience:app', () => {
         projectName: 'teste_api',
         projectDescription: 'projectDescription',
         mongodbUsername: 'mongodbUsername',
-        mongodbPassword: 'mongodbPassword'
+        mongodbPassword: 'mongodbPassword',
+        enableGit: false,
+        openVSCode: false
       });
   });
 

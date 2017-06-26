@@ -31,14 +31,14 @@ module.exports = class extends Generator {
       name: 'mongodbPassword',
       message: 'MongoDB root password',
       default: this.passwordGen()
-    },{
-      type    : 'confirm',
-      name    : 'enableGit',
-      message : 'Do you want create a new GIT repo for this project?'
-    },{
-      type    : 'confirm',
-      name    : 'openVSCode',
-      message : 'Do you want to open Visual Studio Code after project generation?'
+    }, {
+      type: 'confirm',
+      name: 'enableGit',
+      message: 'Do you want create a new GIT repo for this project?'
+    }, {
+      type: 'confirm',
+      name: 'openVSCode',
+      message: 'Do you want to open Visual Studio Code after project generation?'
     }];
 
     return this.prompt(prompts).then(props => {
@@ -86,16 +86,14 @@ module.exports = class extends Generator {
     this.spawnCommandSync('npm', ['install', '@types/mongodb', '@types/restify', '--save-dev']);
     this.spawnCommandSync('typings', ['install', 'body-parser', 'mongodb', '--save']);
 
-    if(this.props.enableGit===true)
-    {
+    if (this.props.enableGit === true) {
       this.spawnCommandSync('git', ['init']);
       this.spawnCommandSync('git', ['add', '.']);
       this.spawnCommandSync('git', ['commit', '-m', 'node-api-docker-1st-class-experience baseline']);
     }
 
-    if(this.props.openVSCode===true)
-    {
-      this.spawnCommand("code", ["."])
+    if (this.props.openVSCode === true) {
+      this.spawnCommand('code', ['.']);
     }
     // This.installDependencies({bower: false});
   }
