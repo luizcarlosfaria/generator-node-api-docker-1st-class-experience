@@ -92,6 +92,8 @@ module.exports = class extends Generator {
       this.spawnCommandSync('git', ['commit', '-m', 'node-api-docker-1st-class-experience baseline']);
     }
 
+    this.spawnCommand('npm', ['run', 'build']);
+
     if (this.props.openVSCode === true) {
       this.spawnCommand('code', ['.']);
     }
