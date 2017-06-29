@@ -8,7 +8,8 @@ export class DataProcess {
 	}
 
 	public async connect(): Promise<any> {
-		this.database = await MongoClient.connect(process.env.mongodb_app);
+		const connectionString: string = process.env.mongodb_app || "";
+		this.database = await MongoClient.connect(connectionString);
 		this.database = this.database.db(this.databaseName);
 	}
 
