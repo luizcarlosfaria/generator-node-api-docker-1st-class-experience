@@ -10,7 +10,7 @@ export class ApiServer implements IInitializable {
 
 	constructor(public apiControllers: IApiController[]) { }
 
-	public IInitialize(): Promise<any> {
+	public Initialize(): Promise<any> {
 		this.restifyServer = restify.createServer();
 		// this.restifyServer.use(restify.acceptParser(this.restifyServer.acceptable));
 		// this.restifyServer.use(restify.authorizationParser());

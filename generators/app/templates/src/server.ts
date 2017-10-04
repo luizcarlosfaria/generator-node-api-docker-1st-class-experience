@@ -10,7 +10,7 @@ servers.push(new ApiServer([
 
 const initAll = async (server: IInitializable) => {
 	console.log("%s Inicializando...", server.name);
-	await server.IInitialize();
+	await server.Initialize();
 	console.log("%s inicializado!", server.name);
 };
 

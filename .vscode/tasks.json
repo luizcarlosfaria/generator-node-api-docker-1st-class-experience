@@ -12,6 +12,27 @@
 			"isShellCommand": true,
 			"isBuildCommand": true,
 			"showOutput": "never"
+    },
+    {
+			"taskName": "[yeoman check]",
+			"command": "npm",
+			"args": [
+        "run",
+        "prepublish"
+			]
+    },
+    {
+			"taskName": "NCU List Updates",
+			"command": "ncu",
+			"args": [
+			]
+		},
+    {
+			"taskName": "NCU Apply Updates",
+			"command": "ncu",
+			"args": [
+        "-u"
+			]
 		}
 	]
 }
