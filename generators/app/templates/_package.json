@@ -21,7 +21,7 @@
     "docker-watch": "npm run docker-run && npm run build-watch",
     "docker-stop": "docker-compose -f docker-compose.yml -f docker-compose.debug.yml down && echo Docker Compose Down finished!",
     "docker-stop-cleanup": "docker-compose -f docker-compose.yml -f docker-compose.debug.yml down -v --remove-orphans",
-    "docker-cleanup": "npm run docker-stop-cleanup && docker rmi <%- projectName %>-api <%- projectName %>-api-livedebug || echo Cleanup finished!"
+    "docker-cleanup": "npm run docker-stop-cleanup && docker rmi <%- projectName %>-api <%- projectName %>-api-livedebug <%- projectName %>-api-base || echo Cleanup finished!"
   },
   "dependencies": {
   },
