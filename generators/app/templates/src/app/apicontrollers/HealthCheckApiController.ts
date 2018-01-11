@@ -18,7 +18,6 @@ export class HealthCheckApiController implements IApiController {
 				{ name: "api", status: "ok" },
 				{ name: "mongodb", status:  result.length > 0 ? "ok" : "no-data"  },
 			]);
-			await data.close();
 			next();
 		});
 
