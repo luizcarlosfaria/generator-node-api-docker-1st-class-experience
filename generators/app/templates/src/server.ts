@@ -5,19 +5,19 @@ import { IInitializable } from "./infrastructure/IInitializable";
 
 const servers: IInitializable[] = new Array<IInitializable>();
 servers.push(new ApiServer([
-	new HealthCheckApiController(),
+  new HealthCheckApiController(),
 ]));
 
 const initAll = async (server: IInitializable) => {
-	console.log("%s Inicializando...", server.name);
-	await server.Initialize();
-	console.log("%s inicializado!", server.name);
+  console.log("%s Inicializando...", server.name);
+  await server.Initialize();
+  console.log("%s inicializado!", server.name);
 };
 
 servers.forEach(initAll);
 
 setInterval(() => {
 
-	console.log(`Debugging a TypeScript NodeJS@${process.version} API on ${os.hostname()} (${process.platform}/${process.arch})`);
+  console.log(`Debugging a TypeScript NodeJS@${process.version} API on ${os.hostname()} (${process.platform}/${process.arch})`);
 
 }, 3000);

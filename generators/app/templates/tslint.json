@@ -13,8 +13,8 @@
         ],
         "indent": [
             true,
-            "tabs",
-            4
+            "spaces",
+            2
         ],
         "one-line": [
             true,

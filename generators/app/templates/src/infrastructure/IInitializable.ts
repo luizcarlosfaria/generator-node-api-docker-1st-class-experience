@@ -1,5 +1,5 @@
 ﻿
 export interface IInitializable {
-	name: string;
-	Initialize(): Promise<any>;
+  name: string;
+  Initialize(): Promise<any>;
 }
