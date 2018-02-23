@@ -6,7 +6,7 @@ export class ApiServer implements IInitializable {
 
   public name: string = "ApiServer";
 
-  public restifyServer: restify.Server;
+  public restifyServer?: restify.Server;
 
   constructor(public apiControllers: IApiController[]) { }
 
@@ -33,17 +33,22 @@ export class ApiServer implements IInitializable {
 		}));*/
 
     this.apiControllers.forEach((apiController) => {
-      apiController.register(this.restifyServer);
+      if (this.restifyServer !== undefined) {
+        apiController.register(this.restifyServer);
+      }
     });
 
     console.log("rest server starting...");
 
     return new Promise((resolve, reject) => {
-
-      this.restifyServer.listen(process.env.api_port, () => {
-        console.log("%s is online on %s", this.restifyServer.name, this.restifyServer.url);
-        resolve();
-      });
+      if (this.restifyServer !== undefined) {
+        this.restifyServer.listen(process.env.api_port, () => {
+          if (this.restifyServer !== undefined) {
+            console.log("%s is online on %s", this.restifyServer.name, this.restifyServer.url);
+          }
+          resolve();
+        });
+      }
 
     });
   }
