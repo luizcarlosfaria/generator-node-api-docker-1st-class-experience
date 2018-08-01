@@ -31,7 +31,7 @@
     "jest-cli": "^22.0.5",
     "nsp": "^3.1.0",
     "yeoman-assert": "^3.1.0",
-    "yeoman-test": "^1.7.0"
+    "yeoman-test": "^2.0.0"
   },
   "dependencies": {
     "chalk": "^2.3.0",
