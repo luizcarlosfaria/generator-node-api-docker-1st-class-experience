@@ -1,6 +1,6 @@
 {
   "name": "generator-node-api-docker-1st-class-experience",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "NodeJS + Typescript + TSLint + Restify + MongoDB + Docker, With VS Code Automation = TypeScript Live Debug with Containers",
   "homepage": "https://github.com/luizcarlosfaria/generator-node-api-docker-1st-class-experience",
   "author": {
