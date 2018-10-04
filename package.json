@@ -6,7 +6,7 @@
   "author": {
     "name": "Luiz Carlos Faria",
     "email": "luizcarlosfaria@gmail.com",
-    "url": "http://luizcarlosfaria.net/"
+    "url": "https://gago.io/blog/projetos/yeoman-generator-node-api-docker-1st-class-experience/"
   },
   "files": [
     "generators"
