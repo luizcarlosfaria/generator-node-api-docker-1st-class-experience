@@ -54,7 +54,7 @@ npm install -g yo generator-node-api-docker-1st-class-experience
 
 ## License
 
-![MIT][npm-license] © [Luiz Carlos Faria](http://luizcarlosfaria.net/) ![made in brazil][brazil]
+![MIT][npm-license] © [Luiz Carlos Faria](http://gago.io/) ![made in brazil][brazil]
 
 
 [brazil]:http://www.goal.cc/content/images/flags/28.png
