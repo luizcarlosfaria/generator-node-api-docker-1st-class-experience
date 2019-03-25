@@ -3308,6 +3308,7 @@ lodash.padstart@^4.1.0:
 lodash.replace@^4.1.4:
   version "4.1.4"
   resolved "https://registry.yarnpkg.com/lodash.replace/-/lodash.replace-4.1.4.tgz#531c0960dfb5256172afc1c34a4f0ba6f0cb20b8"
+  integrity sha1-UxwJYN+1JWFyr8HDSk8LpvDLILg=
 
 lodash.sortby@^4.7.0:
   version "4.7.0"
@@ -5658,6 +5659,7 @@ yeoman-test@^1.9.1:
 yo@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/yo/-/yo-2.0.5.tgz#2f747f5d279ab777e0167b0aa63d7b607507d73d"
+  integrity sha512-PLyTNZSJjHkks/FIln+QE5PxV224MsekCzbROVhZEW0MvLyj/6ghWIVkdBmrwdAbapH8H9q21F1/pQ9Q0Lk9UA==
   dependencies:
     async "^2.6.1"
     chalk "^2.4.1"
@@ -5693,6 +5695,7 @@ yo@^2.0.5:
 yosay@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/yosay/-/yosay-2.0.2.tgz#a7017e764cd88d64a1ae64812201de5b157adf6d"
+  integrity sha512-avX6nz2esp7IMXGag4gu6OyQBsMh/SEn+ZybGu3yKPlOTE6z9qJrzG/0X5vCq/e0rPFy0CUYCze0G5hL310ibA==
   dependencies:
     ansi-regex "^2.0.0"
     ansi-styles "^3.0.0"
