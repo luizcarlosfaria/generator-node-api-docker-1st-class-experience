@@ -76,6 +76,7 @@ module.exports = class extends Generator {
     if (textToEscape === undefined) {
       return textToEscape;
     }
+
     var escapedName = textToEscape.replace(/[^a-z0-9]/gi, '_').toLowerCase();
     return escapedName;
   }
