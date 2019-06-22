@@ -46,7 +46,7 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "prepublish": "nsp check",
+    "prepublish": "npm audit --audit-level high",
     "pretest": "eslint . --fix",
     "test": "jest"
   },
